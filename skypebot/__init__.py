@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import time
 import threading
 
 import sys
@@ -27,7 +28,7 @@ class SkypeBot:
                 token_func()
                 time.sleep(3000)
 
-        self.t = threading.Thread(target=runtit)
+        self.t = threading.Thread(target=runit)
         self.t.daemon = True
         self.t.start()
         
